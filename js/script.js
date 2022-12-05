@@ -35,20 +35,30 @@ const userAge = parseInt(prompt('Quanti anni hai?', 30).trim());
 
 // 3. Calcolare il prezzo totale del viaggio (che si baserà sui km dei passeggeri)
 const priceTotal = (userDistance * priceKm);
-console.log(priceTotal.toFixed(2))
+// !console.log(priceTotal.toFixed(2))
 
 // 4. Calcolare sconto del 20%
 let discountJunior = parseInt((priceTotal / 100) * 20);
-let juniorPrice = priceTotal - discountValue;
-console.log(juniorPrice.toFixed(2))
+let juniorPrice = priceTotal - discountJunior;
+// !console.log(juniorPrice.toFixed(2))
 
 // 4. Calcolare sconto del 40%
 let discountSenior = parseInt((priceTotal / 100) * 40);
-let seniorPrice = priceTotal - discountValue;
-console.log(seniorPrice.toFixed(2))
+let seniorPrice = priceTotal - discountSenior;
+// !console.log(seniorPrice.toFixed(2))
 
 
 //applicare lo sconto
+if (userAge >= 65) {
+    console.log(seniorPrice.toFixed(2))
+    priceElement.innerText = `Complimenti, il tuo prezzo finale sarà di ${seniorPrice.toFixed(2)}€ `
+
+} else {
+    console.log(juniorPrice.toFixed(2))
+    priceElement.innerText = `Complimenti, il tuo prezzo finale sarà di ${juniorPrice.toFixed(2)}€ `
+
+}
+
 
 
 
