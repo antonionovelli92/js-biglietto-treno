@@ -12,3 +12,15 @@ body {
     max-width: 1200px;
     margin: 0 auto;
 }
+
+.badge {
+    background-color: rgba(0, 0, 250, 0.5);
+    text-align: center;
+    color: white;
+    border-radius: 25px;
+    height: 200px;
+    width: 200px;
+    padding: 20px;
+    font-size: 20px;
+
+}
